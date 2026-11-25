@@ -82,22 +82,29 @@ section{padding:96px 24px;text-align:center;position:relative}
 .fino{height:1px;width:120px;background:linear-gradient(90deg,transparent,var(--oro),transparent);margin:34px auto;position:relative}
 .fino::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;background:var(--oro);transform:translate(-50%,-50%) rotate(45deg)}
 
+/* Fotos */
+.foto{margin:48px auto 0;max-width:380px;aspect-ratio:4/5;border-radius:190px 190px 6px 6px;overflow:hidden;border:1px solid var(--oro);padding:6px;background:#fff}
+.foto img{width:100%;height:100%;object-fit:cover;display:block;border-radius:184px 184px 2px 2px}
+.foto.h{max-width:520px;aspect-ratio:4/3;border-radius:6px}
+.foto.h img{border-radius:2px}
+
 /* Hero */
-#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 80% at 50% 0%,var(--rosa-claro),var(--blanco) 70%);overflow:hidden;padding-top:120px}
-.marco{position:absolute;inset:18px;border:1px solid rgba(201,169,97,.55);pointer-events:none;z-index:1}
-.marco::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,169,97,.28)}
-.bokeh span{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(233,201,196,.6),rgba(233,201,196,0) 70%);animation:flota 9s ease-in-out infinite;pointer-events:none}
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(rgba(19,21,10,.45),rgba(19,21,10,.6)),url('assets/1.jpg') center/cover no-repeat;overflow:hidden;padding-top:120px}
+.marco{position:absolute;inset:18px;border:1px solid rgba(232,213,160,.7);pointer-events:none;z-index:1}
+.marco::before{content:"";position:absolute;inset:6px;border:1px solid rgba(232,213,160,.35)}
+.bokeh span{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(233,201,196,.35),rgba(233,201,196,0) 70%);animation:flota 9s ease-in-out infinite;pointer-events:none}
 .est{position:absolute;width:16px;height:16px;background:linear-gradient(135deg,#F3E3B2,#C9A961);clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:titila 3.6s ease-in-out infinite;pointer-events:none;z-index:1}
 .hero-in{position:relative;z-index:2}
-.nombres{font-size:clamp(4.2rem,17vw,9rem);line-height:.88;font-weight:300;letter-spacing:-.01em;background:linear-gradient(110deg,var(--oliva-osc) 0%,var(--oliva-osc) 40%,#C9A961 50%,var(--oliva-osc) 60%,var(--oliva-osc) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brillo 7s linear infinite}
-.amp{display:block;font-style:italic;font-size:.5em;margin:.08em 0;background:linear-gradient(110deg,var(--rosa-osc) 0%,var(--rosa-osc) 40%,#E8D5A0 50%,var(--rosa-osc) 60%,var(--rosa-osc) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brillo 7s linear infinite}
-.completos{font-size:1.05rem;font-style:italic;margin-top:28px;color:var(--texto);opacity:.85}
+#hero .etq{color:var(--oro-claro)}
+.nombres{font-size:clamp(4.2rem,17vw,9rem);line-height:.88;font-weight:300;letter-spacing:-.01em;background:linear-gradient(110deg,#fff 0%,#fff 40%,#E8D5A0 50%,#fff 60%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brillo 7s linear infinite;filter:drop-shadow(0 2px 12px rgba(0,0,0,.45))}
+.amp{display:block;font-style:italic;font-size:.5em;margin:.08em 0;background:linear-gradient(110deg,var(--rosa) 0%,var(--rosa) 40%,#fff 50%,var(--rosa) 60%,var(--rosa) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brillo 7s linear infinite}
+.completos{font-size:1.05rem;font-style:italic;margin-top:28px;color:#fff;opacity:.92;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .orn{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px}
 .orn span{width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--oro))}
 .orn span:last-child{transform:scaleX(-1)}
 .orn b{width:8px;height:8px;background:var(--oro);transform:rotate(45deg)}
-.hero-fecha{font-family:var(--sans);margin-top:22px;font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oliva-osc)}
-.scroll{margin-top:40px;color:var(--rosa-osc);font-size:1.1rem;animation:pulse 2.2s infinite}
+.hero-fecha{font-family:var(--sans);margin-top:22px;font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.scroll{margin-top:40px;color:var(--rosa);font-size:1.1rem;animation:pulse 2.2s infinite}
 
 /* Mensaje */
 #mensaje{background:var(--blanco)}
@@ -118,6 +125,9 @@ section{padding:96px 24px;text-align:center;position:relative}
 .cal-d{padding:9px 0;opacity:.8}
 .cal-d.hl{background:var(--rosa);color:var(--oliva-osc);border-radius:50%;font-weight:500;opacity:1;animation:glow 3s ease-in-out infinite}
 @keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(232,213,160,.0)}50%{box-shadow:0 0 18px 4px rgba(232,213,160,.55)}}
+.versiculo{max-width:480px;margin:0 auto 48px}
+.versiculo p{font-size:clamp(1.4rem,4vw,1.8rem);font-style:italic;font-weight:300;line-height:1.5;color:var(--rosa-claro)}
+.versiculo small{display:block;margin-top:12px;font-family:var(--sans);font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oro-claro)}
 .cuenta{display:flex;justify-content:center;gap:clamp(16px,5vw,38px);padding:26px 0;border-top:1px solid rgba(201,169,97,.45);border-bottom:1px solid rgba(201,169,97,.45);max-width:480px;margin:0 auto}
 .cuenta div{display:flex;flex-direction:column;align-items:center;font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
 .cuenta b{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,8vw,3.2rem);line-height:1;color:var(--blanco);margin-bottom:6px;text-shadow:0 0 18px rgba(232,213,160,.55)}
@@ -159,6 +169,10 @@ section{padding:96px 24px;text-align:center;position:relative}
 #galeria{background:var(--oliva-osc);color:var(--rosa-claro)}
 #galeria h2{color:var(--rosa-claro)}
 .qr{width:160px;height:160px;margin:26px auto 0;padding:8px;background:#fff;border-radius:6px;display:block}
+.banco{margin-top:40px;padding:30px 22px;background:var(--blanco);border:1px solid var(--oro);border-radius:6px}
+.banco h3{font-style:italic;font-size:1.9rem;margin-bottom:6px}
+.banco p{font-size:1.1rem}
+.clabe{font-family:var(--sans);font-size:clamp(1.15rem,5vw,1.5rem);letter-spacing:.14em;color:var(--oliva);font-weight:500;margin:10px 0}
 
 /* Formularios */
 #rsvp{background:var(--hueso)}
@@ -200,7 +214,7 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
 
 <main id="contenido">
 
-<!-- HERO -->
+<!-- HERO (fondo: assets/1.jpg) -->
 <section id="hero">
  <div class="marco"></div>
  <div class="bokeh" aria-hidden="true">
@@ -229,13 +243,15 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
 <section id="mensaje">
  <div class="wrap">
   <p class="frase rv">“Con mucha ilusión queremos compartir contigo uno de los días más importantes de nuestras vidas. Será un honor contar con tu presencia para celebrar nuestro amor y comenzar juntos un nuevo capítulo.”</p>
+  <div class="foto rv"><img src="assets/2.jpg" alt="Jennifer y Josué" loading="lazy"></div>
   <div class="fino"></div>
   <h2 class="rv">Con la bendición de nuestras familias</h2>
   <div class="fam">
    <div class="rv"><h3>Padres de la novia</h3><p>María Araceli Lope López</p></div>
-   <div class="rv"><h3>Padres del novio</h3><p>Vanessa Moisés Osorio<br>Josué Fuentes Sosa</p></div>
-   <div class="rv ancho"><h3>Padrinos</h3><p>María Jimena Zambrano Cárdenas<br>Erick Fernando Quintana de la Cruz</p></div>
+   <div class="rv"><h3>Padres del novio</h3><p>Vanessa Moisés Osorio<br>Josué Cristopher Fuentes Sosa</p></div>
+   <div class="rv ancho"><h3>Padrinos de velación</h3><p>María Jimena Zambrano Cárdenas<br>Erick Fernando Quintana de la Cruz</p></div>
   </div>
+  <div class="foto h rv"><img src="assets/3.jpg" alt="Jennifer y Josué" loading="lazy"></div>
  </div>
 </section>
 
@@ -250,11 +266,16 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
    <div class="cal-g cal-h"><div>DOM</div><div>LUN</div><div>MAR</div><div>MIÉ</div><div>JUE</div><div>VIE</div><div>SÁB</div></div>
    <div class="cal-g" id="cal"></div>
   </div>
+  <div class="versiculo rv">
+   <p>“Nosotros amamos porque ÉL nos amó primero”</p>
+   <small>Juan 4, 19</small>
+  </div>
   <p class="etq rv" style="color:var(--rosa)">Faltan</p>
   <div class="cuenta rv" id="cuenta">
    <div><b id="dias">00</b>días</div><div><b id="horas">00</b>horas</div><div><b id="min">00</b>min</div><div><b id="seg">00</b>seg</div>
   </div>
   <button class="btn claro rv" onclick="descargarICS()"><i class="fa-regular fa-calendar-plus"></i> Agregar al calendario</button>
+  <div class="foto rv"><img src="assets/4.jpg" alt="Jennifer y Josué" loading="lazy"></div>
  </div>
 </section>
 
@@ -262,6 +283,7 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
 <section id="lugares">
  <div class="wrap">
   <h2 class="rv">Dónde y cuándo</h2>
+  <div class="foto h rv"><img src="assets/5.jpg" alt="Jennifer y Josué" loading="lazy"></div>
 
   <div class="lugar rv">
    <i class="fa-solid fa-church ic"></i>
@@ -271,6 +293,8 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
    <div class="mapa"><iframe title="Mapa ceremonia" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Parroquia+Mar%C3%ADa+Inmaculada+M%C3%A9rida+Yucat%C3%A1n&output=embed"></iframe></div>
    <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x8f5676aff15d4db9:0x643face6ce29683?entry=s&sa=X&ved=2ahUKEwj9s_6UjZOYAxXVTTABHRqaCFkQ4kB6BAgYEAA"><i class="fa-solid fa-location-dot"></i> Ver ubicación exacta</a>
   </div>
+
+  <div class="foto rv"><img src="assets/6.jpg" alt="Jennifer y Josué" loading="lazy"></div>
 
   <div class="lugar rv">
    <i class="fa-solid fa-champagne-glasses ic"></i>
@@ -293,7 +317,7 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
  <div class="wrap">
   <p class="etq rv">Código de vestimenta</p>
   <h2 class="rv">Formal</h2>
-  <p class="rv">Hombres de traje. Mujeres de vestido largo, de preferencia.</p>
+  <p class="rv">De preferencia colores oscuros.<br>Hombres: traje completo.<br>Mujeres: vestido largo.</p>
   <div class="paleta rv">
    <div><i style="background:#FFFFFF"></i>Blanco</div>
    <div><i style="background:var(--rosa)"></i>Rosa palo</div>
@@ -301,6 +325,7 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
   </div>
   <p class="nota rv">Los colores de nuestra boda</p>
   <p class="reservado rv">Por favor evita el <b>blanco</b> y el <b>verde</b>: son colores reservados.</p>
+  <div class="foto rv"><img src="assets/7.jpg" alt="Jennifer y Josué" loading="lazy"></div>
  </div>
 </section>
 
@@ -314,6 +339,18 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
    <a class="btn rv" target="_blank" rel="noopener" href="https://mesaderegalos.liverpool.com.mx/" style="background:#E31B23;border-color:#E31B23"><i class="fa-solid fa-gift"></i> Liverpool · Evento 60087492</a>
    <a class="btn rv" target="_blank" rel="noopener" href="https://www.sears.com.mx/" style="background:#0B3C7D;border-color:#0B3C7D"><i class="fa-solid fa-gift"></i> Sears · Evento #297551</a>
   </div>
+
+  <div class="banco rv">
+   <i class="fa-solid fa-money-bill-transfer" style="font-size:1.5rem;color:var(--rosa-osc);margin-bottom:10px"></i>
+   <h3>Regalo en efectivo</h3>
+   <p class="etq" style="margin:10px 0 0">Clave interbancaria</p>
+   <p class="clabe" id="clabe">5256 7823 0838 4893</p>
+   <p>Banamex</p>
+   <p>a nombre de <b>Jennifer Berenice Lope López</b></p>
+   <button type="button" class="btn borde" id="btnClabe" onclick="copiarClabe()"><i class="fa-regular fa-copy"></i> Copiar clave</button>
+  </div>
+
+  <div class="foto h rv"><img src="assets/8.jpg" alt="Jennifer y Josué" loading="lazy"></div>
  </div>
 </section>
 
@@ -326,6 +363,7 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/21Y31mfP2MD4DtkRtMGYKw?utm_source=generator&si=fd5c95cdbbad4574" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
   <a class="btn borde rv" target="_blank" rel="noopener" href="https://open.spotify.com/playlist/21Y31mfP2MD4DtkRtMGYKw?si=d65b625a455249c4&pt=9c618bad6184812f9bc0b1f29ee02e44"><i class="fa-brands fa-spotify"></i> Abrir en Spotify</a>
+  <div class="foto rv"><img src="assets/9.jpg" alt="Jennifer y Josué" loading="lazy"></div>
  </div>
 </section>
 
@@ -336,6 +374,7 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
   <p class="rv">Queremos ver la boda a través de tus ojos. Escanea el código para compartir tus fotos y videos.</p>
   <img class="qr rv" alt="Código QR de la galería" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1kWT7TBD_T5KE2cDIoAj3DKhtwO8xwcev%3Fusp%3Dsharing">
   <a class="btn claro rv" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1kWT7TBD_T5KE2cDIoAj3DKhtwO8xwcev?usp=sharing"><i class="fa-brands fa-google-drive"></i> Subir mis fotos</a>
+  <div class="foto h rv"><img src="assets/10.jpg" alt="Jennifer y Josué" loading="lazy"></div>
  </div>
 </section>
 
@@ -343,6 +382,7 @@ footer{background:var(--oliva-osc);color:var(--rosa);text-align:center;padding:3
 <section id="rsvp">
  <div class="wrap">
   <h2 class="rv">Confirma tu asistencia</h2>
+  <div class="foto rv"><img src="assets/11.jpg" alt="Jennifer y Josué" loading="lazy"></div>
   <div class="caja rv">
    <div class="pase" id="pase" style="display:none">
     <p class="etq">Pase personal</p>
@@ -499,6 +539,14 @@ const t = setInterval(()=>{
     if(inv) document.getElementById('rNombre').value = inv;
   }
 })();
+
+/* Copiar CLABE */
+function copiarClabe(){
+  const num = '5256782308384893', b = document.getElementById('btnClabe');
+  const ok = () => { b.innerHTML = '<i class="fa-solid fa-check"></i> ¡Copiada!'; setTimeout(()=>{b.innerHTML='<i class="fa-regular fa-copy"></i> Copiar clave'},2200) };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(num).then(ok).catch(()=>{}); }
+  else { const ta = document.createElement('textarea'); ta.value = num; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');ok()}catch(e){} ta.remove(); }
+}
 
 /* WhatsApp */
 function enviarRSVP(){
